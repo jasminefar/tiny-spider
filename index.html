@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cute CSS Spider</title>
+<style>
+  .spider {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: #000;
+    border-radius: 50%;
+    margin: 100px auto;
+  }
+
+  .spider::before,
+  .spider::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    background: #000;
+    border-radius: 50%;
+    top: 30px;
+  }
+
+  .spider::before {
+    left: 20px;
+  }
+
+  .spider::after {
+    right: 20px;
+  }
+
+  .eye {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    top: 30px;
+  }
+
+  .eye.left {
+    left: 20px;
+  }
+
+  .eye.right {
+    right: 20px;
+  }
+
+  .eye::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: black;
+    border-radius: 50%;
+    top: 6px;
+    left: 6px;
+  }
+
+  .smile {
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    border-bottom: 3px solid white;
+    border-radius: 0 0 50px 50px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .leg {
+    position: absolute;
+    width: 70px;
+    height: 10px;
+    background: #000;
+    top: 90%;
+    transform-origin: left center;
+  }
+
+  .leg.left-1 { left: -50px; transform: rotate(-30deg); }
+  .leg.left-2 { left: -60px; transform: rotate(-60deg); }
+  .leg.left-3 { left: -10px; transform: rotate(-90deg); }
+  .leg.left-4 { left: -10px; transform: rotate(-120deg); }
+
+  .leg.right-1 { right: -10px; transform: rotate(30deg); }
+  .leg.right-2 { right: -10px; transform: rotate(60deg); }
+  .leg.right-3 { right: -10px; transform: rotate(90deg); }
+  .leg.right-4 { right: -10px; transform: rotate(120deg); }
+</style>
+</head>
+<body>
+  <div class="spider">
+    <div class="eye left"></div>
+    <div class="eye right"></div>
+    <div class="smile"></div>
+    <div class="leg left-1"></div>
+    <div class="leg left-2"></div>
+    <div class="leg left-3"></div>
+    <div class="leg left-4"></div>
+    <div class="leg right-1"></div>
+    <div class="leg right-2"></div>
+    <div class="leg right-3"></div>
+    <div class="leg right-4"></div>
+  </div>
+</body>
+</html>
